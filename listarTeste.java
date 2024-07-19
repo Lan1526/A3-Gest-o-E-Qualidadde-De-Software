@@ -10,10 +10,10 @@ public class listarTeste extends BaseTest {
     @Test
     public void validarlista(){
         ListarDespesas page=new ListarDespesas(getDriver());
-        String resultadoFinal=page.informarBaseFísica1("POA").informarMes1("JANEIRO").informarCredor1("CEE").informarDespesa1("ENERGIA ").informarValor1("180").informarVencimento1("12/12/2024").resultadoLista();
+        String resultadoFinal=page.informarBaseFísica1("POA").informarMes1("JANEIRO").informarCredor1("CEEE").informarDespesa1("ENERGIA ").informarValor1("180").informarVencimento1("12/12/2024").resultadoLista();
 
         Assert.assertTrue(resultadoFinal.contains("POA"));
-        Assert.assertTrue(resultadoFinal.contains("CEE"));
+        Assert.assertTrue(resultadoFinal.contains("CEEE"));
         Assert.assertTrue(resultadoFinal.contains("ENERGIA "));
         Assert.assertTrue(resultadoFinal.contains("180"));
         Assert.assertTrue(resultadoFinal.contains("12/12/2024"));
